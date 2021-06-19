@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+nav ul{
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+nav ul li{
+    padding: 16px;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: gray;
+    font-family: sans-serif;
+}
+.logo{
+    font-family: sans-serif;
+    float: left;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.b{
+    display: none;
+    padding: 0;
+}
+/* mobile devices */
+@media only screen and (max-width: 600px) {
+    .b{
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: 2px solid gray;
+        border-radius: 5px;
+        position: relative;
+        float: right;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    nav ul{
+        visibility: hidden;
+    }
+    .hide{
+        visibility: hidden;
+    }
+    .apear{
+        visibility: visible;
+    }
+
+    .anim-fade{
+        animation: anim 0.5s ease-in-out;
+    }
+
+    .b span:nth-child(1){
+        display: block;
+        width: 90%;
+        height: 2px;
+        background-color: gray;
+        position: absolute;
+        left: 1px;
+        top: 7px;
+    }
+
+    .b span:nth-child(2){
+        display: block;
+        width: 90%;
+        height: 2px;
+        background-color: gray;
+        position: absolute;
+        left: 1px;
+        top: 14px;
+    }
+    
+    .b span:nth-child(3){
+        display: block;
+        width: 90%;
+        height: 2px;
+        background-color: gray;
+        position: absolute;
+        left: 1px;
+        top: 20px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav{
+        width: 100%;
+    }
+    
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        height: 0px;
+        align-items: center;
+        float: none;
+        font-size: 20pt;
+    }
+    
+    nav ul li{
+        padding: 10px;
+        list-style: none;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: gray;
+        font-family: sans-serif;
+    }
+    .logo{
+        font-family: sans-serif;
+        font-size: 1.4em;
+        padding: 10px;
+        padding-left: calc(50% - 39px);
+        float: none;
+    }
+  }
+
+@media screen and (min-width:601) {
+    #nav-ul {
+        visibility: visible;
+        padding-top: 0px;
+    }
+}
+  @keyframes anim {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+
+    100%{
+        width: 100%;
+        opacity: 1;
+    }
+}
+.carasoul{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 50vh;
+    z-index: 999;
+}
